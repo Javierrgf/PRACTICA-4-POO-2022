@@ -1,3 +1,4 @@
+//computer header
 #ifndef COMPUTER_H
 #define COMPUTER_H
 
@@ -14,8 +15,10 @@ enum class ComputerType{
 
 class Computer : public Product{
     private:
+        //private variables
         ComputerType type_;
     public: 
+        //constructor
         Computer(
             std::string id,
             ComputerType type,
@@ -29,11 +32,8 @@ class Computer : public Product{
             price,
             maker,
             seller
-            ){
-                type_ = type;
-                
-}
-
+            ){type_ = type;}
+       //observer and modifier
     inline ComputerType get_type()const{return type_;};
     inline void set_type(ComputerType type){type_= type;};
     
