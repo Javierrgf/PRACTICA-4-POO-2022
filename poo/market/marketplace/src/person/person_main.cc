@@ -3,7 +3,7 @@
 #include "person.h"
 
 int main(){
-    Person hola("2345", "Yoni", "melabo", "calle la pantomima", "jerez", "cai", "españa", 2003);
+    Person hola("2345", "JOSE", "RODRIGUEZ", "Calle ALTA", "Villa del Rio", "Cordoba", "España", 2003);
 
     std::cout<<hola.get_id()<<"\n";
     std::cout<<hola.get_name()<<"\n";

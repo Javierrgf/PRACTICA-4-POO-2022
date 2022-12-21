@@ -1,5 +1,5 @@
-
-
+//market.h
+//market header
 #include <string>
 #include <stdlib.h>
 #include <iostream>
@@ -13,14 +13,18 @@
 
 class Market{
     private:
+    //private variables
         std::list<Client> client_list_;
         std::list <Seller> seller_list_;
         std::string slogan_;
     public:
+    //market constructor
         Market(std::string slogan){slogan_ = slogan;}
-
+    //observer
         inline std::string get_slogan(){return slogan_;};
+    //modifier
         inline void set_slogan(std::string slogan){slogan_ = slogan;};
+    //methods
         bool add_client(Client c);
         bool add_seller(Seller s);
         int n_clients();
@@ -33,9 +37,6 @@ class Market{
         bool delete_product_client(Product p, std::string id_client);
         float get_money_in_basket();
         void dump_market();
-
-        
-
 };
 
 #endif

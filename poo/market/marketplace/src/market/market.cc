@@ -1,3 +1,5 @@
+//market.cc
+//market functions
 #include "product.h"
 
 #include <vector>
@@ -122,19 +124,6 @@ float Market::get_money_in_basket(){
     return resul;
 }
 void Market::dump_market(){
-    /*string linea;
-    
-    ifstream re;
-    re.open("ventas.txt", ios::in);
-    if(re.fail()){
-        cout<<"Error de lectura"<<endl;
-        return;
-    }
-    while(!re.eof()){
-        getline(re, linea);
-        v.push_back(linea);
-    }
-    re.close();*/
     std::list<Client>::iterator it;
     vector<string> idprods;
     vector<int> qprods;
@@ -150,7 +139,7 @@ void Market::dump_market(){
         qprods = it->get_qs();//it stores product quantities into qprods vector
         idprods = it->get_ids();//it stores product ids into idprods vector
         for(int i = 0; i < it->get_size(); i++){
-            wr<<"| "+ it->get_id()+" | "+ idprods[i]+ " | "<<qprods[i]<<" |"<<endl;
+            wr<<"| "+ it->get_id()+"    | "+ idprods[i]+ "      | "<<qprods[i]<<"            |"<<endl;
         }
     }
     wr<<"|----------------------------------------|"<<endl;

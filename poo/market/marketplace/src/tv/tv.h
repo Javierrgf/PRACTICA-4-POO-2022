@@ -1,5 +1,5 @@
-//person.h
-//A simple Person class
+//tv.h
+//tv header
 
 #ifndef TV_H
 #define TV_H

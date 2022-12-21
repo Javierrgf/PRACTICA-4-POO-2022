@@ -1,3 +1,5 @@
+//computer.cc
+//computer functions
 #include<string>
 #include<iostream>
 #include "computer.h"

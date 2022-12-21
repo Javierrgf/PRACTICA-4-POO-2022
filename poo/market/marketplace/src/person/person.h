@@ -1,5 +1,5 @@
 //person.h
-
+//person header
 #ifndef PERSON_H
 #define PERSON_H
 
@@ -7,9 +7,11 @@
 
 class Person{
     private:
+    //private variables
         std::string id_, name_, surname_, address_, town_, province_, country_;
         int entry_year_;
     public:
+    //person constructor
         Person(std::string id,
                 std::string name ="empty",
                 std::string surname = "empty",
@@ -18,7 +20,7 @@ class Person{
                 std::string province = "empty",
                 std::string country = "empty",
                 int entry_year = 0);
-
+        //observers
         inline std::string get_id(){return id_;}
         inline std::string get_name(){return name_;}
         inline std::string get_surname(){return surname_;}
@@ -30,7 +32,7 @@ class Person{
         inline std::string get_name_surname(){return name_+" "+ surname_;};
 
         std::string get_full_address();
-
+        //modifiers
         inline void set_id(std::string id){id_ = id;}
         inline void set_name(std::string name){name_ = name;}
         inline void set_surname(std::string surname){surname_ = surname;}

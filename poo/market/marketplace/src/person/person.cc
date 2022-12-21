@@ -1,4 +1,5 @@
 //person.cc
+//person functions
 #include <string>
 #include "person.h"
 Person::Person(std::string id,

@@ -1,3 +1,5 @@
+//seller.h
+//seller header
 #ifndef SELLER_H
 #define SELLER_H
 #include <iostream>
@@ -12,11 +14,11 @@ using namespace std;
 
 class Seller : public Person, public Basket{
     private:
-
+        //private variables
         string sector_;
 
     public:
-
+        //seller constructor
         Seller( string id, 
                 string name = "empty", 
                 string surname = "empty",
@@ -29,7 +31,7 @@ class Seller : public Person, public Basket{
                 ): Person(id, name, surname, address, town, province, country, entry_year){
                     sector_ = sector;
                 }
-
+        //observer and modifier
         inline string get_sector(){return sector_;};
         inline void set_sector(string sector){sector_ = sector;};
     

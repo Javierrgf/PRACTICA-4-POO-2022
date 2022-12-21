@@ -1,5 +1,5 @@
 //product.h
-
+//product header
 #ifndef PRODCUT_H
 #define PRODCUT_H
 
@@ -11,9 +11,11 @@ using namespace std;
 
 class Product{
     private: 
+    //private variables
         string id_, name_, maker_, seller_;
         float price_;
     public:
+    //constructor
         Product(string id, 
                 string name = "empty",
                 float price = 0.0,

@@ -1,3 +1,5 @@
+//product.cc
+//product functions
 #include <string>
 #include "product.h"
 
