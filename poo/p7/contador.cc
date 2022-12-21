@@ -3,7 +3,7 @@
 #include "contador.h"
 
 
-Contador Contador::operator=(const Contador &c){
+Contador Contador::operator=(const Contador &c){//Contador = Contador
     valor_ = c.get();
     if(valor_ > max_){
         valor_ = max_;
@@ -14,7 +14,7 @@ Contador Contador::operator=(const Contador &c){
     
     return *this;
 }
-Contador Contador::operator=(int i){
+Contador Contador::operator=(int i){//Contador = int
     valor_ = i;
     if(valor_ > getmax()){
         valor_ = max_;
@@ -24,14 +24,14 @@ Contador Contador::operator=(int i){
     }
     return *this;
 }
-Contador Contador::operator++(void){//pre
+Contador Contador::operator++(void){//++Contador
     valor_++;
     if(valor_ > max_){
         valor_ = max_;
     }
     return *this;
 }
-Contador Contador::operator++(int){//post
+Contador Contador::operator++(int){//Contador++
     Contador aux = *this;
     valor_++;
     if(valor_>max_){
@@ -39,14 +39,14 @@ Contador Contador::operator++(int){//post
     }
     return aux;
 }
-Contador Contador::operator--(void){
+Contador Contador::operator--(void){//--Contador
     valor_--;
     if(valor_ < min_){
         valor_ = min_;
     }
     return *this;
 }
-Contador Contador::operator--(int){
+Contador Contador::operator--(int){//Contador--
     Contador aux = *this;
     valor_--;
     if(valor_< min_){
@@ -54,7 +54,7 @@ Contador Contador::operator--(int){
     }
     return aux;
 }
-Contador Contador::operator+(int i){
+Contador Contador::operator+(int i){//Contador += int
     valor_ = valor_ + i;
     if(valor_< min_){
         valor_ = min_;
@@ -64,7 +64,7 @@ Contador Contador::operator+(int i){
     }
     return *this;
 }
-Contador operator+(int i, const Contador &c){
+Contador operator+(int i, const Contador &c){//Contador = int + Contador
     int ausi = 0;
     ausi = c.get() + i;
     if(ausi< c.getmin()){
@@ -76,7 +76,7 @@ Contador operator+(int i, const Contador &c){
     Contador d = Contador(ausi, c.getmin(), c.getmax());
     return d;
 }
-Contador Contador::operator-(int i){
+Contador Contador::operator-(int i){//Contador -= int
     valor_ = valor_ - i;
     if(valor_< getmin()){
         valor_ = getmin();
@@ -86,7 +86,7 @@ Contador Contador::operator-(int i){
     }
     return *this;
 }
-Contador operator-(int i, const Contador &c){
+Contador operator-(int i, const Contador &c){//Contador = int - Contador
     int ausi = 0;
     ausi = i - c.get();
     if(ausi < c.getmin()){
@@ -98,11 +98,11 @@ Contador operator-(int i, const Contador &c){
     Contador d = Contador(ausi, c.getmin(), c.getmax());
     return d;
 }
-std::ostream &operator<< (std::ostream &o, const Contador &c){
+std::ostream &operator<< (std::ostream &o, const Contador &c){//<<
     o <<c.get();
     return o;
 }
-std::istream &operator>> (std::istream &i, Contador &c){
+std::istream &operator>> (std::istream &i, Contador &c){//>>
     while(1){
         int valor;
         i >> valor;
