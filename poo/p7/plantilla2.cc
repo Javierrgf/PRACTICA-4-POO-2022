@@ -8,8 +8,8 @@ template <class T> class MiClase{
       T divide(){return x_/y_;};
 };
 int main(){
-  MiClase <int> enteros(10,3);
-  MiClase <double> dobeles(3.3, 5.5);
+  MiClase <int> enteros(666,3);
+  MiClase <double> dobeles(78.4455, 45.5301);
   cout << "DIVISION DE ENTEROS = " << entero.divide() << endl;
   cout << "DIVISION DE REALES = " << dobeles.divide() << endl;
 }
