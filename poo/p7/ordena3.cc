@@ -3,16 +3,16 @@
 #include <algorithm>
 
 using namespace std;
-bool descen(float i, float j){return i > j;};
-bool ascen(float i, float j){return i < j;};
+bool descen(double i, double j){return i > j;};
+bool ascen(double i, double j){return i < j;};
 
 int main(){
-    vector<float> v;
+    vector<double> v;
     bool i = true;
-    float x;  
+    double x;  
     int y;
     while(i){
-        cout<<"Introduzca un numero entero"<<endl;
+        cout<<"Introduzca un numero real"<<endl;
         cin>>x;
         v.push_back(x);
         system("clear");
