@@ -9,7 +9,7 @@
 using namespace std;
 
 int main(){
-    Client cliente("0001", "miguel", "angel", "6876", "Bichuela", "Cordoba", "francia", 2002, 4);
-    cout<<cliente.get_premium()<<endl;
+    Client CLI1("0001", "JUAN", "JOSE", "11111", "C/ ALTA", "cordoba", "ESPAÑA", 2002, 4);
+    cout<<CLI1.get_premium()<<endl;
     return 0;                     
 }
