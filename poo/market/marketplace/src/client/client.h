@@ -1,3 +1,4 @@
+//client header
 #ifndef CLIENT_H
 #define CLIENT_H
 #include <iostream>
@@ -12,11 +13,11 @@ using namespace std;
 
 class Client : public Person, public Basket{
     private:
-
+    //private variables
         int premium_;
 
     public:
-
+        //constructor
         Client(string id, 
             string name = "empty", 
             string surname = "empty",
@@ -27,7 +28,7 @@ class Client : public Person, public Basket{
                 int entry_year = 0,
                 int premium = 0
                 ):Person(id, name, surname, address, town, province, country, entry_year){premium_ = premium;}
-
+        //observers and modifiers
         inline int get_premium(){return premium_;};
         inline void set_premium(int premium){premium_ = premium;};
     
