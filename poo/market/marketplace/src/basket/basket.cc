@@ -1,3 +1,4 @@
+//basket functions
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
@@ -8,7 +9,7 @@
 
 using namespace std;
 
-
+//constructor
 void Basket::add_product(Product p){
     if(product_quantity_.count(p.get_id()) == 0){
         product_list_.push_back(p); //<-
@@ -79,10 +80,6 @@ bool Basket::delete_product(string id){
 }
 
 void Basket::delete_basket(){
-/*      list<Product>::iterator it;
-    for(it = product_list_.begin(); it != product_list_.end(); ++it){
-        product_list_.erase(it);
-    } */ 
     product_list_.erase(product_list_.begin(), product_list_.end());
     product_quantity_.clear();
 }
